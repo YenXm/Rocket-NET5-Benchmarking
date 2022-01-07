@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BenchmarkApplication.BenchmarkHarness-20220106-141141</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19042.1415 (20H2/October2020Update)
+Intel Core i7-8650U CPU 1.90GHz (Kaby Lake R), 1 CPU, 8 logical and 4 physical cores
+.NET SDK=5.0.402
+  [Host]     : .NET 5.0.11 (5.0.1121.47308), X64 RyuJIT
+  DefaultJob : .NET 5.0.11 (5.0.1121.47308), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                     Method</th><th>IterationCount</th><th> Mean</th><th>Error</th><th>StdDev</th><th>Rank</th>
+</tr>
+</thead><tbody><tr><td>SqlWhereCountGetSmallPayloadAsync</td><td>1</td><td>106.6 ms</td><td>2.13 ms</td><td>3.68 ms</td><td>1</td>
+</tr><tr><td>DirectCountGetSmallPayloadAsync</td><td>1</td><td>108.5 ms</td><td>2.03 ms</td><td>4.23 ms</td><td>1</td>
+</tr><tr><td>WhereCountGetSmallPayloadAsync</td><td>1</td><td>110.7 ms</td><td>2.57 ms</td><td>7.34 ms</td><td>1</td>
+</tr><tr><td>WhereCountGetSmallPayloadAsync</td><td>100</td><td>11,081.3 ms</td><td>217.66 ms</td><td>305.13 ms</td><td>2</td>
+</tr><tr><td>DirectCountGetSmallPayloadAsync</td><td>100</td><td>11,097.0 ms</td><td>220.79 ms</td><td>172.38 ms</td><td>2</td>
+</tr><tr><td>SqlWhereCountGetSmallPayloadAsync</td><td>100</td><td>11,348.2 ms</td><td>183.22 ms</td><td>295.87 ms</td><td>2</td>
+</tr></tbody></table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 6 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\Yen\source\repos\BenchmarkApplication\bin\Release\net5.0\e3123bde-a140-4624-8063-b329bf29bd33
+// command took 2.72s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\Yen\source\repos\BenchmarkApplication\bin\Release\net5.0\e3123bde-a140-4624-8063-b329bf29bd33
+// command took 4.44s and exited with 0
+// ***** Done, took 00:00:07 (7.36 sec)   *****
+// Found 6 benchmarks:
+//   BenchmarkHarness.WhereCountGetSmallPayloadAsync: DefaultJob [IterationCount=1]
+//   BenchmarkHarness.DirectCountGetSmallPayloadAsync: DefaultJob [IterationCount=1]
+//   BenchmarkHarness.SqlWhereCountGetSmallPayloadAsync: DefaultJob [IterationCount=1]
+//   BenchmarkHarness.WhereCountGetSmallPayloadAsync: DefaultJob [IterationCount=100]
+//   BenchmarkHarness.DirectCountGetSmallPayloadAsync: DefaultJob [IterationCount=100]
+//   BenchmarkHarness.SqlWhereCountGetSmallPayloadAsync: DefaultJob [IterationCount=100]
+
+// **************************
+// Benchmark: BenchmarkHarness.WhereCountGetSmallPayloadAsync: DefaultJob [IterationCount=1]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "e3123bde-a140-4624-8063-b329bf29bd33.dll" --benchmarkName "BenchmarkApplication.BenchmarkHarness.WhereCountGetSmallPayloadAsync(IterationCount: 1)" --job "Default" --benchmarkId 0 in C:\Users\Yen\source\repos\BenchmarkApplication\bin\Release\net5.0\e3123bde-a140-4624-8063-b329bf29bd33\bin\Release\net5.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 5.0.11 (5.0.1121.47308), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 245800.00 ns, 245.8000 us/op
