@@ -8,11 +8,13 @@ Intel Core i7-8650U CPU 1.90GHz (Kaby Lake R), 1 CPU, 8 logical and 4 physical c
 
 
 ```
-|                            Method | IterationCount |        Mean |     Error |    StdDev | Rank |
-|---------------------------------- |--------------- |------------:|----------:|----------:|-----:|
-| SqlWhereCountGetSmallPayloadAsync |              1 |    106.6 ms |   2.13 ms |   3.68 ms |    1 |
-|   DirectCountGetSmallPayloadAsync |              1 |    108.5 ms |   2.03 ms |   4.23 ms |    1 |
-|    WhereCountGetSmallPayloadAsync |              1 |    110.7 ms |   2.57 ms |   7.34 ms |    1 |
-|    WhereCountGetSmallPayloadAsync |            100 | 11,081.3 ms | 217.66 ms | 305.13 ms |    2 |
-|   DirectCountGetSmallPayloadAsync |            100 | 11,097.0 ms | 220.79 ms | 172.38 ms |    2 |
-| SqlWhereCountGetSmallPayloadAsync |            100 | 11,348.2 ms | 183.22 ms | 295.87 ms |    2 |
+|                                  Method | IterationCount |        Mean |     Error |      StdDev |      Median |
+|---------------------------------------- |--------------- |------------:|----------:|------------:|------------:|
+| SqlAndDistinctCountGetSmallPayloadAsync |              1 |    106.6 ms |   2.74 ms |     8.00 ms |    104.0 ms |
+|            SqlCountGetSmallPayloadAsync |              1 |    107.6 ms |   2.15 ms |     4.09 ms |    107.2 ms |
+|        HashSetCountGetSmallPayloadAsync |              1 |    116.1 ms |   3.19 ms |     9.16 ms |    114.5 ms |
+|       DistinctCountGetSmallPayloadAsync |              1 |    118.6 ms |   3.38 ms |     9.75 ms |    116.1 ms |
+|            SqlCountGetSmallPayloadAsync |            100 | 10,883.0 ms | 217.56 ms |   223.41 ms | 10,879.6 ms |
+| SqlAndDistinctCountGetSmallPayloadAsync |            100 | 11,018.0 ms | 194.86 ms |   273.17 ms | 10,925.8 ms |
+|        HashSetCountGetSmallPayloadAsync |            100 | 12,052.2 ms | 240.67 ms |   491.62 ms | 11,914.5 ms |
+|       DistinctCountGetSmallPayloadAsync |            100 | 12,729.0 ms | 368.90 ms | 1,064.36 ms | 12,487.5 ms |

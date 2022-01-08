@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>BenchmarkApplication.BenchmarkHarness-20220106-141141</title>
+<title>BenchmarkApplication.BenchmarkHarness-20220107-162107</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -22,14 +22,16 @@ Intel Core i7-8650U CPU 1.90GHz (Kaby Lake R), 1 CPU, 8 logical and 4 physical c
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>                     Method</th><th>IterationCount</th><th> Mean</th><th>Error</th><th>StdDev</th><th>Rank</th>
+<thead><tr><th>                           Method</th><th>IterationCount</th><th> Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Rank</th>
 </tr>
-</thead><tbody><tr><td>SqlWhereCountGetSmallPayloadAsync</td><td>1</td><td>106.6 ms</td><td>2.13 ms</td><td>3.68 ms</td><td>1</td>
-</tr><tr><td>DirectCountGetSmallPayloadAsync</td><td>1</td><td>108.5 ms</td><td>2.03 ms</td><td>4.23 ms</td><td>1</td>
-</tr><tr><td>WhereCountGetSmallPayloadAsync</td><td>1</td><td>110.7 ms</td><td>2.57 ms</td><td>7.34 ms</td><td>1</td>
-</tr><tr><td>WhereCountGetSmallPayloadAsync</td><td>100</td><td>11,081.3 ms</td><td>217.66 ms</td><td>305.13 ms</td><td>2</td>
-</tr><tr><td>DirectCountGetSmallPayloadAsync</td><td>100</td><td>11,097.0 ms</td><td>220.79 ms</td><td>172.38 ms</td><td>2</td>
-</tr><tr><td>SqlWhereCountGetSmallPayloadAsync</td><td>100</td><td>11,348.2 ms</td><td>183.22 ms</td><td>295.87 ms</td><td>2</td>
+</thead><tbody><tr><td>SqlAndDistinctCountGetSmallPayloadAsync</td><td>1</td><td>106.6 ms</td><td>2.74 ms</td><td>8.00 ms</td><td>104.0 ms</td><td>1</td>
+</tr><tr><td>SqlCountGetSmallPayloadAsync</td><td>1</td><td>107.6 ms</td><td>2.15 ms</td><td>4.09 ms</td><td>107.2 ms</td><td>1</td>
+</tr><tr><td>HashSetCountGetSmallPayloadAsync</td><td>1</td><td>116.1 ms</td><td>3.19 ms</td><td>9.16 ms</td><td>114.5 ms</td><td>2</td>
+</tr><tr><td>DistinctCountGetSmallPayloadAsync</td><td>1</td><td>118.6 ms</td><td>3.38 ms</td><td>9.75 ms</td><td>116.1 ms</td><td>2</td>
+</tr><tr><td>SqlCountGetSmallPayloadAsync</td><td>100</td><td>10,883.0 ms</td><td>217.56 ms</td><td>223.41 ms</td><td>10,879.6 ms</td><td>3</td>
+</tr><tr><td>SqlAndDistinctCountGetSmallPayloadAsync</td><td>100</td><td>11,018.0 ms</td><td>194.86 ms</td><td>273.17 ms</td><td>10,925.8 ms</td><td>3</td>
+</tr><tr><td>HashSetCountGetSmallPayloadAsync</td><td>100</td><td>12,052.2 ms</td><td>240.67 ms</td><td>491.62 ms</td><td>11,914.5 ms</td><td>4</td>
+</tr><tr><td>DistinctCountGetSmallPayloadAsync</td><td>100</td><td>12,729.0 ms</td><td>368.90 ms</td><td>1,064.36 ms</td><td>12,487.5 ms</td><td>5</td>
 </tr></tbody></table>
 </body>
 </html>
